@@ -14,20 +14,72 @@
 </head>
 
 <body ng-app="Weather">
-  <div class="container" ng-controller="MainCtrl">
+ 
+<header id="banner">
+  <div id="logo">
+   <h1 id="siteTitle">L<i class="wi wi-hail"></i>cal Weather App</h1>
+  </div>
+     <!--Navigation bar-->
+   <div id="topNav" class="container">
+     <nav id="navBar" role="navigation" class="collapse navbar-collapse">
+        <a href="pages/contact.html" class="scrollable">Contact</a>
+        <a href="pages/about.html" class="scrollable">About</a>
+      </nav>
+    </div>
+  </header>
+  
+ <div class="page-divider"></div>
+  
+ <!--SECTION  --> 
+  <section id="detailedSection" role="main" class="row">
     <div class="row">
-      <header class="col-xs-12 text-center">
-        <h1>L<i class="wi wi-hail"></i>cal Weather App</h1>
-      </header>
-
-      <div class="col-xs-8 col-xs-offset-2">
-        <div class="text-center status">
-          <p>{{Data.city}}, {{Data.country}}</p>
-          <p>{{Data.temp}} &#176;<span class="temp" ng-click="Data.sys()">{{Data.unit}}</span></p>
-          <p>{{Data.des}}</p>
+    <!--MATERIAL CARD  -->
+      <div class="col-xs-4">
+  <div id="materialCard">
+    	<div class="materialContent">
+		     <div class="pure-u-1">
+      <div id = "img" class = "transition"> </div>
+		      </div>
+      <div class="divider">		</div>
+  <div class = "ripplelink js-geolocation">
+    <div class="status">
+	  <p>{{Data.city}}, {{Data.country}} <i class="fa fa-map-marker"></i></p>
+    </div>
+     </div>  
+  </div>
+  </div>
+      </div>
+  
+ <!--WEATHER SUMMARY-->
+<div id="summary" class="col-xs-5 col-sm-3" ng-controller="MainCtrl">
+   
+  <div class="status" class="col-xs-4 col-sm-2">
+ <p>{{Data.city}}, {{Data.country}}</p>
+    
+<!--Weather Forecast  -->
+<div class="col-xs-5 col-sm-3 ">
+  <!--weather icons  -->      
+  <div class="icons">
+ </div>     
+  <!--forecast  -->
+  <div id="forecast"></div>
+  <!--weekdays-->
+  <div id="weekdays"></div>
+</div>
+    
+ <!--Current city weather and temp-->
+ <div class="row">
+   <div class"col-xs-4 col-sm-2"> 
+   <p>{{Data.temp}} &#176;
+  <span class="temp" ng-click="Data.sys()">{{Data.unit}}</span>
+     </p>
+   </div>
+ <p>{{Data.des}}</p>
+    </div>
         </div>
-
-        <div class="text-center all-icon">
+   
+  <!--Weather Icons-->
+        <div class="all-icon">
           <div class="icon sun-shower hide ">
             <div class="cloud"></div>
             <div class="sun">
@@ -63,13 +115,20 @@
             <div class="rain"></div>
           </div>
         </div>
+      
+    
+  </div>  
+    
+    
+</div>
+  </section>
 
-        <p class="text-center">Created with <i class="fa fa-heart"></i> By <a href="http://codepen.io/mercury" target="_blank">Mercury</a></p>
-      </div>
-    </div>
-  </div>
+  <!--FOOTER  -->
+  <footer>
+    <p class="text-center">Created with <i class="fa fa-heart"></i> By <a href="http://codepen.io/mercury" target="_blank">Mercury</a></p>
+  </footer>
 </body>
-<script type="text/javascript" src="js/index.js"></script>
+<script src="js/index.js"></script>
 <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.14/angular.min.js"></script>
 </html>

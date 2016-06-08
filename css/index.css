@@ -1,16 +1,191 @@
 body {
-  font-family: 'Roboto';
+  font-family: 'Roboto', sans-serif;
   color: #fff;
+  padding:25px;
   background-color: #161616;
+  text-rendering: optimizeLegibility;
+  font-size: 1em; 
+ font-weight: 300;
 }
 
+div nav{
+  display:block;
+}
+
+/*HEADER STYLES*/
+#banner{
+  display:block;
+  padding: 10px;
+}
+
+#logo{
+  float:left;
+}
+/*Decoration for the header*/
+#logo #siteTitle{
+  margin: 0;
+  font-size:40px;
+  font-family:"cursive" !important;
+  text-transform:uppercase;
+  text-decoration:none;
+  font-weight:500;
+  font-style:normal;
+  display:inline-block;
+  line-height:110%;
+  color:#FFF;
+}
+/*Style for div containing nav bar*/
+#topNav nav{
+  float:right;
+  position:relative;
+  font-weight: 400;
+  font-style: normal;
+  font-family: "futura-pt";
+  font-size: 13px;
+  line-height: 1.6em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/*Navigation Links in navBar*/
+#topNav #navBar{
+  text-decoration:none !important;
+  margin:0;
+  padding:0;
+}
+
+/*style for each link in the navigation bar*/
+#topNav #navBar>a{
+  margin-right:20px;
+  position:relative;
+  font-family: "Shadows Into Light", "cursive";
+  font-weight:bold;
+  font-size:15px;
+}
+#navBar>a:hover{
+  text-decoration:none;
+}
+/*style for the last item element in navigation bar*/
+#navBar>a:last-child{
+ margin-right:0px;
+}
+
+/*MAIN SECTION  */
+#detailedSection{
+  margin-top: 25px;
+  margin: 10px auto;
+  padding: 10px 10px 0px 10px;
+  display:block;
+}
+
+/*MATERIAL CARD*/
+#materialCard{
+  margin-top:15px;
+  display:inline !important;
+}
+
+a{
+  color: #999;
+}
+a:hover{
+  color: #FFC107;
+  text:decoration:none;
+}
+.grey{
+  color: #999;
+}
+
+/* .shadow{
+box-shadow: 0px 5px 5px -0px rgba(0,0,0,0.3);
+} */
+.transition{
+   transition: all .5s cubic-bezier(.3, 0, 0, 1.3)
+}
+
+/*Image for material card*/
+#img{
+background:url(http://kristenvonbargen.com/wp-content/uploads/2013/11/camp.jpg) center no-repeat;
+  height:25em;
+}
+/*Material Card Content*/
+.materialContent {
+	margin-top: 0vh;
+	max-width: 35em;
+	background-color: white;
+	transition: all 0.5s;
+}
+
+.ripplelink{
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.8em; 
+  font-weight: 400;
+  color: #999;
+  display:block;
+  text-align:right;
+  text-decoration:none;
+  position:relative;
+  overflow:hidden;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  z-index:0;
+  width: 100%;
+  letter-spacing: 0.1em;
+  padding: 1em;
+  padding-right: 2em;
+}
+
+.ink {
+  display: block;
+  position: absolute;
+  background:rgba(0, 0, 0, 0.1);
+  border-radius: 100%;
+  -webkit-transform:scale(0);
+     -moz-transform:scale(0);
+       -o-transform:scale(0);
+          transform:scale(0);
+}
+
+.animate {
+	-webkit-animation:ripple 0.65s linear;
+   -moz-animation:ripple 0.65s linear;
+    -ms-animation:ripple 0.65s linear;
+     -o-animation:ripple 0.65s linear;
+        animation:ripple 0.65s linear;
+}
+
+@-webkit-keyframes ripple {
+    100% {opacity: 0; -webkit-transform: scale(2.5);}
+}
+@-moz-keyframes ripple {
+    100% {opacity: 0; -moz-transform: scale(2.5);}
+}
+@-o-keyframes ripple {
+    100% {opacity: 0; -o-transform: scale(2.5);}
+}
+@keyframes ripple {
+    100% {opacity: 0; transform: scale(2.5);}
+}
+
+
+/*WEATHER SUMMARY  */
+#summary{
+  position:relative;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 13px;
+  line-height: 1.6em;
+  letter-spacing: 1px;
+}
 .status p {
   font-size: 1.8em;
   text-transform: capitalize;
+  cursor:pointer;
 }
 
-header {
-  margin-bottom: 30px;
+.status p:hover{
+  color: #333;
 }
 
 .temp{
@@ -20,15 +195,20 @@ header {
 .temp:hover{
   color:#005096;
 }
-h1 {
-  font-size: 5em;
-}
+
+#forecast,.icons, #weekdays{
+    float: right;
+    margin-top: 2%;
+    padding-right: 0.5em;
+    font-size: 1.5em;
+    opacity: 0.7;
+}  
 
 .all-icon {
   margin-bottom: 20px;
 }
 
-.hide {
+div.hide {
   display: none;
 }
 
@@ -248,7 +428,7 @@ h1 {
   margin: -1.25rem 0 0 -1.25rem;
   content: '\2744';
   color: #fff;
-
+  list-height: 1em;
   opacity: 0.2;
   -webkit-animation: spin 8s linear infinite reverse;
   animation: spin 8s linear infinite reverse;
@@ -389,4 +569,13 @@ h1 {
     background: #fff;
     opacity: 0.2;
   }
+}
+
+footer{
+  margin-top:100px;
+  display:block;
+  border-top: 10px;
+  clear: both;
+  position: relative;
+  overflow: hidden;
 }
