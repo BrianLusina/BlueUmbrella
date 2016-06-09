@@ -70,6 +70,10 @@ div nav{
  margin-right:0px;
 }
 
+.page-divider{
+  margin-bottom:30px;
+}
+
 /*MAIN SECTION  */
 #detailedSection{
   margin-top: 25px;
@@ -95,9 +99,6 @@ a:hover{
   color: #999;
 }
 
-/* .shadow{
-box-shadow: 0px 5px 5px -0px rgba(0,0,0,0.3);
-} */
 .transition{
    transition: all .5s cubic-bezier(.3, 0, 0, 1.3)
 }
@@ -169,17 +170,41 @@ background:url(http://kristenvonbargen.com/wp-content/uploads/2013/11/camp.jpg) 
 }
 
 
-/*WEATHER SUMMARY  */
+/*WEATHER SUMMARY*/
 #summary{
-  position:relative;
   font-weight: 400;
   font-style: normal;
   font-size: 13px;
   line-height: 1.6em;
   letter-spacing: 1px;
 }
+
+/*Container for current weather icons and temp and desc*/
+.icon-temp-container{
+  
+}
+
+/*Current Weather icons*/
+.all-icon {
+  /* margin-bottom: 20px; */
+  margin: 0;
+  font-size:40px;
+  display:inline-block;
+}
+
+/*Current temp and desc  */
+#temp-Desc{
+  margin: 0;
+  font-size:15px !important;
+  text-decoration:none;
+  font-weight:500;
+  font-style:normal;
+  display:inline-block;
+  line-height:110%;
+}
+
 .status p {
-  font-size: 1.8em;
+  font-size: 2.8em;
   text-transform: capitalize;
   cursor:pointer;
 }
@@ -196,6 +221,7 @@ background:url(http://kristenvonbargen.com/wp-content/uploads/2013/11/camp.jpg) 
   color:#005096;
 }
 
+
 #forecast,.icons, #weekdays{
     float: right;
     margin-top: 2%;
@@ -204,9 +230,6 @@ background:url(http://kristenvonbargen.com/wp-content/uploads/2013/11/camp.jpg) 
     opacity: 0.7;
 }  
 
-.all-icon {
-  margin-bottom: 20px;
-}
 
 div.hide {
   display: none;

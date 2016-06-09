@@ -14,113 +14,132 @@
 </head>
 
 <body ng-app="Weather">
- 
-<header id="banner">
-  <div id="logo">
-   <h1 id="siteTitle">L<i class="wi wi-hail"></i>cal Weather App</h1>
-  </div>
-     <!--Navigation bar-->
-   <div id="topNav" class="container">
-     <nav id="navBar" role="navigation" class="collapse navbar-collapse">
+
+  <header id="banner">
+    <div id="logo">
+      <h1 id="siteTitle">L<i class="wi wi-hail"></i>cal Weather App</h1>
+    </div>
+    <!--Navigation bar-->
+    <div id="topNav" class="container">
+      <nav id="navBar" role="navigation" class="collapse navbar-collapse">
         <a href="pages/contact.html" class="scrollable">Contact</a>
         <a href="pages/about.html" class="scrollable">About</a>
       </nav>
     </div>
   </header>
-  
- <div class="page-divider"></div>
-  
- <!--SECTION  --> 
+
+  <div class="page-divider"></div>
+
+  <!--SECTION  -->
   <section id="detailedSection" role="main" class="row">
     <div class="row">
-    <!--MATERIAL CARD  -->
+
+      <!--MATERIAL CARD  -->
       <div class="col-xs-4">
-  <div id="materialCard">
-    	<div class="materialContent">
-		     <div class="pure-u-1">
-      <div id = "img" class = "transition"> </div>
-		      </div>
-      <div class="divider">		</div>
-  <div class = "ripplelink js-geolocation">
-    <div class="status">
-	  <p>{{Data.city}}, {{Data.country}} <i class="fa fa-map-marker"></i></p>
-    </div>
-     </div>  
-  </div>
-  </div>
+        <div id="materialCard">
+          <div class="materialContent">
+            <div class="pure-u-1">
+              <div id="img" class="transition"> </div>
+            </div>
+            <div class="divider"> </div>
+            <div class="ripplelink js-geolocation">
+              <div class="status">
+                <p>{{Data.city}}, {{Data.country}} <i class="fa fa-map-marker"></i></p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-  
- <!--WEATHER SUMMARY-->
-<div id="summary" class="col-xs-5 col-sm-3" ng-controller="MainCtrl">
-   
-  <div class="status" class="col-xs-4 col-sm-2">
- <p>{{Data.city}}, {{Data.country}}</p>
-    
-<!--Weather Forecast  -->
-<div class="col-xs-5 col-sm-3 ">
-  <!--weather icons  -->      
-  <div class="icons">
- </div>     
-  <!--forecast  -->
-  <div id="forecast"></div>
-  <!--weekdays-->
-  <div id="weekdays"></div>
-</div>
-    
- <!--Current city weather and temp-->
- <div class="row">
-   <div class"col-xs-4 col-sm-2"> 
-   <p>{{Data.temp}} &#176;
-  <span class="temp" ng-click="Data.sys()">{{Data.unit}}</span>
-     </p>
-   </div>
- <p>{{Data.des}}</p>
+
+      <!--Weather Summary  -->
+      <div id="summary" class="col-xs-7" ng-controller="MainCtrl">
+
+        <!--City Name and Country -->
+        <div class="row">
+          <div class="status" class="col-xs-4 col-sm-2">
+            <p>{{Data.city}}, {{Data.country}}</p>
+          </div>
+        </div>
+        
+        <!--DIVIDER  -->
+        <div class="page-divider"></div>
+        
+<!--Row Containing current weather and forecast-->
+        <div class="row">
+          <!--Current weather and temp-->
+          <div class="col-xs-6">
+            
+            <div=class"icon-temp-container">
+            
+              <!--Weather Icons-->
+            <div class="all-icon">
+
+              <div class="icon sun-shower hide ">
+                <div class="cloud"></div>
+                <div class="sun">
+                  <div class="rays"></div>
+                </div>
+                <div class="rain"></div>
+              </div>
+
+              <div class="icon thunder-storm hide thunderstom">
+                <div class="cloud"></div>
+                <div class="lightning">
+                  <div class="bolt"></div>
+                  <div class="bolt"></div>
+                </div>
+              </div>
+
+              <div class="icon cloudy hide clouds">
+                <div class="cloud"></div>
+                <div class="cloud"></div>
+              </div>
+
+              <div class="icon flurries hide snow">
+                <div class="cloud"></div>
+                <div class="snow">
+                  <div class="flake"></div>
+                  <div class="flake"></div>
+                </div>
+              </div>
+
+              <div class="icon sunny hide clear">
+                <div class="sun">
+                  <div class="rays"></div>
+                </div>
+              </div>
+
+              <div class="icon rainy hide rain">
+                <div class="cloud"></div>
+                <div class="rain"></div>
+              </div>
+            </div>
+            
+            <!--temp and desc-->
+            <div id="temp-Desc">
+            <p>{{Data.temp}} &#176; <span class="temp" ng-click="Data.sys()">{{Data.unit}}</span>
+            </p>
+            <p>{{Data.des}}</p>
+            </div>
+              
+            </div>
+          </div>
+          
+          <!--Weather Forecast-->
+          <div class="col-xs-4">
+            <!--weather icons  for forecast-->
+            <div class="icons"></div>
+            <!--forecast  temp-->
+            <div id="forecast"></div>
+            <!--weekdays-->
+            <div id="weekdays"></div>
+          </div>
+          
+        </div>
+
+      </div>
+
     </div>
-        </div>
-   
-  <!--Weather Icons-->
-        <div class="all-icon">
-          <div class="icon sun-shower hide ">
-            <div class="cloud"></div>
-            <div class="sun">
-              <div class="rays"></div>
-            </div>
-            <div class="rain"></div>
-          </div>
-          <div class="icon thunder-storm hide thunderstom">
-            <div class="cloud"></div>
-            <div class="lightning">
-              <div class="bolt"></div>
-              <div class="bolt"></div>
-            </div>
-          </div>
-          <div class="icon cloudy hide clouds">
-            <div class="cloud"></div>
-            <div class="cloud"></div>
-          </div>
-          <div class="icon flurries hide snow">
-            <div class="cloud"></div>
-            <div class="snow">
-              <div class="flake"></div>
-              <div class="flake"></div>
-            </div>
-          </div>
-          <div class="icon sunny hide clear">
-            <div class="sun">
-              <div class="rays"></div>
-            </div>
-          </div>
-          <div class="icon rainy hide rain">
-            <div class="cloud"></div>
-            <div class="rain"></div>
-          </div>
-        </div>
-      
-    
-  </div>  
-    
-    
-</div>
   </section>
 
   <!--FOOTER  -->
@@ -128,6 +147,7 @@
     <p class="text-center">Created with <i class="fa fa-heart"></i> By <a href="http://codepen.io/mercury" target="_blank">Mercury</a></p>
   </footer>
 </body>
+
 <script src="js/index.js"></script>
 <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.14/angular.min.js"></script>
