@@ -188,14 +188,44 @@ background:url(http://kristenvonbargen.com/wp-content/uploads/2013/11/camp.jpg) 
 }
 
 /*Current temp and desc  */
-#temp-Desc{
+#temp-desc{
   margin: 0;
-  font-size:15px !important;
+  font-size:25px !important;
   text-decoration:none;
   font-weight:500;
   font-style:normal;
   display:inline-block;
   line-height:110%;
+  text-align:center;
+}
+
+/*SEARCHBOX and stuff  */
+#searchbox{
+  argin-right: 15px;
+    margin-top: 8%;
+}
+
+.form-control {
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    background-color: rgba(0,0,0,0.25);
+}
+
+#searchbox ul {
+    padding: 0px;
+}
+
+.ui-menu {
+    opacity: 0.5;
+    width: 90%;
+    background-color: #000000;
+    border-radius: 5px;
+}
+.ui-autocomplete {
+    height: 160px;
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
 
 .status p {

@@ -17,7 +17,7 @@
 
   <header id="banner">
     <div id="logo">
-      <h1 id="siteTitle">L<i class="wi wi-hail"></i>cal Weather App</h1>
+      <h1 id="siteTitle">L<i class="wi wi-hail"></i>cal Weather</h1>
     </div>
     <!--Navigation bar-->
     <div id="topNav" class="container">
@@ -112,13 +112,6 @@
                 <div class="rain"></div>
               </div>
             </div>
-            
-            <!--temp and desc-->
-            <div id="temp-Desc">
-            <p>{{Data.temp}} &#176; <span class="temp" ng-click="Data.sys()">{{Data.unit}}</span>
-            </p>
-            <p>{{Data.des}}</p>
-            </div>
               
           </div>
           
@@ -132,6 +125,39 @@
             <div id="weekdays"></div>
           </div>
           
+        </div>
+        
+        
+        <!--ROw with Current Weather temp and desc-->
+        <div class="row">
+          
+          <!--Current temp-->
+          <div class="col-xs-6" style="text-align:center">
+            <h3 id="temp-desc">{{Data.temp}} &#176; <span class="temp" ng-click="Data.sys()">{{Data.unit}}</span></h3>
+          </div>
+          
+        </div>
+        
+        <div class="row">
+          <!--Weather Desc-->
+          <div class="col-xs-6">
+            <!--Search Box-->
+            <div id="searchbox">
+              <input id="search" class="form-control ui-autocomplete-input" placeholder="Search for another City..." autocomplete="off">
+              <ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content" id="ui-id-1" tabindex="0" style="display: none;">
+              </ul>
+              </div>
+            
+<!--            <div>
+              <h6 id="date-time"></h6>
+              <h6 id="weather-desc">{{Data.des}}</h6>
+            </div>
+            <div>
+              <h3 id="wind"></h3>
+              <h3 id="humidity"></h3>
+            </div>
+-->            
+          </div>          
         </div>
 
       </div>
