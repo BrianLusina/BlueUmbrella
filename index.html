@@ -1,176 +1,115 @@
 <!DOCTYPE html>
-<!-- HTML5 Hello world by kirupa - http://www.kirupa.com/html5/getting_your_feet_wet_html5_pg1.htm -->
-<html lang="en-us">
+<html >
+  <head>
+    <meta charset="UTF-8">
+    <title>Hali Ya Anga</title>
+    <!--Bootstrap-->
+    <link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css'>
+    <!--Weather icons-->
+    <link rel='stylesheet prefetch' href='http://cdnjs.cloudflare.com/ajax/libs/weather-icons/1.3.2/css/weather-icons.css'>
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" type="text/css" />
+    
+    <!--Custom Styles-->
+    <link rel="stylesheet" href="css/index.css">
+    
+  </head>
 
-<head>
-<meta charset="utf-8">
-<title>Hali Ya Anga</title>
-<link rel="stylesheet" href="css/index.css" type="text/css" />
-<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" type="text/css" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/1.3.2/css/weather-icons.min.css" type="text/css" />
-<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" type="text/css" />
-<link href='http://fonts.googleapis.com/css?family=Roboto:100,300,700,400' rel='stylesheet' type='text/css'>
-
-</head>
-
-<body ng-app="Weather">
-
-  <header id="banner">
-    <div id="logo">
-      <h1 id="siteTitle">L<i class="wi wi-hail"></i>cal Weather</h1>
-    </div>
-    <!--Navigation bar-->
-    <div id="topNav" class="container">
-      <nav id="navBar" role="navigation" class="collapse navbar-collapse">
-        <a href="pages/contact.html" class="scrollable">Contact</a>
-        <a href="pages/about.html" class="scrollable">About</a>
-      </nav>
-    </div>
-  </header>
-
-  <div class="page-divider"></div>
-
-  <!--SECTION  -->
-  <section id="detailedSection" role="main" class="row">
-    <div class="row">
-
-      <!--MATERIAL CARD  -->
-      <div class="col-xs-4">
-        <div id="materialCard">
-          <div class="materialContent">
-            <div class="pure-u-1">
-              <div id="img" class="transition"> </div>
-            </div>
-            <div class="divider"> </div>
-            <div class="ripplelink js-geolocation">
-              <div class="status">
-                <p>{{Data.city}}, {{Data.country}} <i class="fa fa-map-marker"></i></p>
-              </div>
-            </div>
+  <body>
+      <!--Header-->
+      <header id="banner">
+          <div id="logo">
+              <h1 id="siteTitle">L<i class="wi wi-hail"></i>cal Weather</h1>
           </div>
-        </div>
-      </div>
-
-      <!--Weather Summary  -->
-      <div id="summary" class="col-xs-7" ng-controller="MainCtrl">
-
-        <!--City Name and Country -->
-        <div class="row">
-          <div class="status" class="col-xs-4 col-sm-2">
-            <p>{{Data.city}}, {{Data.country}}</p>
+          
+          <!--Navigation bar-->
+          <div id="topNav" class="container">
+              <nav id="navBar" role="navigation" class="collapse navbar-collapse">
+                  <a href="contact.html" class="scrollable">Contact</a>
+                  <a href="about.html" class="scrollable">About</a>
+              </nav>
           </div>
-        </div>
-        
-        <!--DIVIDER  -->
-        <div class="page-divider"></div>
-        
-<!--Row Containing current weather and forecast-->
-        <div class="row">
-          <!--Current weather and temp-->
-          <div class="col-xs-6">
+      </header>
+      
+    <div class='container-fluid'>
+        <div class='main'>
             
-            <!--Weather Icons-->
-            <div class="all-icon">
-
-              <div class="icon sun-shower hide ">
-                <div class="cloud"></div>
-                <div class="sun">
-                  <div class="rays"></div>
+            <div class="row">
+                
+                <!--Left container-->
+                <div class="col-xs-4">
+                    <!--Material Card-->
+                    <div id="material-card">
+                        <div id="material-content">
+                            <div id="material-img"></div>
+                            
+                            <div class="material-divider"></div>
+                            
+                            <div id="material-location-tag">
+                                <p id="city-material"></p>
+                            </div>
+                            
+                        </div>
+                    </div>
                 </div>
-                <div class="rain"></div>
-              </div>
-
-              <div class="icon thunder-storm hide thunderstom">
-                <div class="cloud"></div>
-                <div class="lightning">
-                  <div class="bolt"></div>
-                  <div class="bolt"></div>
+                
+                <!--Right Container-->
+                <div class="col-xs-7">
+                    <!--City Container-->
+                    <div class='row'>
+                        <!--city name-->
+                        <div class='col-xs-1 col-sm-6' id='city'></div>
+                    </div>
+                    
+                    <!--Weather Icons and forecast container-->
+                    <div class='row'>
+                        <!--Icons-->
+                        <div class='col-xs-6'>
+                            <div id='icon'></div>
+                        </div>
+                        
+                        <!--Forecasts-->
+                        <div class='col-xs-4'>
+                            <div class='icons'></div>
+                            <div id='forecast'></div>
+                            <div id='weekdays'></div>
+                        </div>
+                    </div>
+                    
+                    <!--Temp and switch temp unit C/F container-->
+                    <div class='row'>
+                        <!--Temp-->
+                        <div class='col-xs-6'>
+                            <div id='temp'></div>
+                        </div>                
+                        
+                        <!--Switch Button-->
+                        <div class='col-xs-4'>
+                            <div id='switch'></div>
+                        </div>
+                    </div>
+                  
+                    <!--Search city bar-->
+                    <div class='row'>
+                        <!--Search box-->
+                        <div class='col-xs-12'>
+                            <div id='searchbox'>
+                                <input id="search" class="form-control" placeholder='Search for another City..'></input>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
-
-              <div class="icon cloudy hide clouds">
-                <div class="cloud"></div>
-                <div class="cloud"></div>
-              </div>
-
-              <div class="icon flurries hide snow">
-                <div class="cloud"></div>
-                <div class="snow">
-                  <div class="flake"></div>
-                  <div class="flake"></div>
-                </div>
-              </div>
-
-              <div class="icon sunny hide clear">
-                <div class="sun">
-                  <div class="rays"></div>
-                </div>
-              </div>
-
-              <div class="icon rainy hide rain">
-                <div class="cloud"></div>
-                <div class="rain"></div>
-              </div>
+                
+            <!--End Row-->
             </div>
-              
-          </div>
-          
-          <!--Weather Forecast-->
-          <div class="col-xs-4">
-            <!--weather icons  for forecast-->
-            <div class="icons"></div>
-            <!--forecast  temp-->
-            <div id="forecast"></div>
-            <!--weekdays-->
-            <div id="weekdays"></div>
-          </div>
-          
-        </div>
-        
-        
-        <!--ROw with Current Weather temp and desc-->
-        <div class="row">
-          
-          <!--Current temp-->
-          <div class="col-xs-6" style="text-align:center">
-            <h3 id="temp-desc">{{Data.temp}} &#176; <span class="temp" ng-click="Data.sys()">{{Data.unit}}</span></h3>
-          </div>
-          
-        </div>
-        
-        <div class="row">
-          <!--Weather Desc-->
-          <div class="col-xs-6">
-            <!--Search Box-->
-            <div id="searchbox">
-              <input id="search" class="form-control ui-autocomplete-input" placeholder="Search for another City..." autocomplete="off">
-              <ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content" id="ui-id-1" tabindex="0" style="display: none;">
-              </ul>
-              </div>
-            
-<!--            <div>
-              <h6 id="date-time"></h6>
-              <h6 id="weather-desc">{{Data.des}}</h6>
-            </div>
-            <div>
-              <h3 id="wind"></h3>
-              <h3 id="humidity"></h3>
-            </div>
--->            
-          </div>          
-        </div>
-
+      <!--End Main-->
       </div>
-
+    <!--End container fluid-->
     </div>
-  </section>
-
-  <!--FOOTER  -->
-  <footer>
-    <p class="text-center">Created with <i class="fa fa-heart"></i> By <a href="http://codepen.io/mercury" target="_blank">Mercury</a></p>
-  </footer>
-</body>
+<!--Script-->
+<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='http://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js'></script>
 <script src="js/index.js"></script>
-<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.14/angular.min.js"></script>
+
+  </body>
 </html>
