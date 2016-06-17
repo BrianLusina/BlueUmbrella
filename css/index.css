@@ -3,6 +3,10 @@
 #banner{
   display:block;
   padding: 10px;
+    background-color:transparent;
+    color:white;
+    padding:10px;
+    height:7%;
 }   
 
 #logo{
@@ -19,43 +23,8 @@
   font-style:normal;
   display:inline-block;
   line-height:110%;
-  color:#FFF;
-}
-/*Style for div containing nav bar*/
-#topNav nav{
-  float:right;
-  position:relative;
-  font-weight: 400;
-  font-style: normal;
-  font-family: "futura-pt";
-  font-size: 13px;
-  line-height: 1.6em;
-  text-transform: uppercase;
-  letter-spacing: 1px;
 }
 
-/*Navigation Links in navBar*/
-#topNav #navBar{
-  text-decoration:none !important;
-  margin:0;
-  padding:0;
-}
-
-/*style for each link in the navigation bar*/
-#topNav #navBar>a{
-  margin-right:20px;
-  position:relative;
-  font-family: "Shadows Into Light", "cursive";
-  font-weight:bold;
-  font-size:15px;
-}
-#navBar>a:hover{
-  text-decoration:none;
-}
-/*style for the last item element in navigation bar*/
-#navBar>a:last-child{
- margin-right:0px;
-}
 
 /*-------------------------------------------------------------------*/
 /*Material Card*/
@@ -128,15 +97,10 @@ height:100%;
  
 }
 
-
-
 .container-fluid{
-  
  color:#ffffff;
  width:100%;
-
     min-height:100%;
- 
 }
 .btn:focus, btn:active{
 
@@ -208,7 +172,7 @@ body{
 }
 #searchbox {
   margin-right:15px;
-  margin-top:8%;
+  margin-top:3%;
 }
 .ui-menu-item:hover{
    
@@ -256,3 +220,33 @@ body{
 .form-control::-moz-placeholder { color: #ddd; }
 .form-control:-ms-input-placeholder { color: #ddd; }
 
+/*===============================
+Footer
+===============================*/
+#main-footer{
+      margin: 0 auto;
+  width: 100%;
+    padding:5px;
+  padding-left: 30px;
+  padding-right: 30px;
+    background:rgba(15,15,15,.925);
+}
+#main-footer small{
+    float:left;
+    font-weight: 500;
+    font-size: 16px;
+    margin:5px;
+    color:white;
+}
+
+.nav {
+  text-align: right;
+}
+.nav li {
+  display: inline-block;
+  margin: 0 10px;
+  vertical-align: top;
+}
+.nav li:last-child {
+  margin-right: 0;
+}
