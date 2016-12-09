@@ -5,12 +5,12 @@ export default class Forecast extends React.Component{
     
     render(){
         return(
-            <div class='row'>
-                <div class='col-xs-6'>
+            <div className='row'>
+                <div className='col-xs-6'>
                     <div id='icon'></div>
                 </div>
-            <div class='col-xs-4'>
-                <div class='icons'></div>
+            <div className='col-xs-4'>
+                <div className='icons'></div>
                 <div id='forecast'></div>
                 <div id='weekdays'></div>
             </div>
