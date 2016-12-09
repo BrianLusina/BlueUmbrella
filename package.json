@@ -1,0 +1,28 @@
+{
+  "name": "local-weather",
+  "version": "2.0.0",
+  "description": "Tell's you the weather of your current location, and others ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BrianLusina/Local-Weather.git"
+  },
+  "keywords": [
+    "Local",
+    "Weather",
+    "Anga",
+    "Weather",
+    "React",
+    "Weather",
+    "App"
+  ],
+  "author": "The Lusina",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BrianLusina/Local-Weather/issues"
+  },
+  "homepage": "https://github.com/BrianLusina/Local-Weather#readme"
+}
