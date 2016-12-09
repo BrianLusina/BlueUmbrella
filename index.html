@@ -9,115 +9,57 @@
     <link rel='stylesheet prefetch' href='http://cdnjs.cloudflare.com/ajax/libs/weather-icons/1.3.2/css/weather-icons.css'>
     <!--Font Awesome-->
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" type="text/css" />
-    
+
     <!--Custom Styles-->
     <link rel="stylesheet" href="css/index.css">
-      <script>console.time('anga-app')</script>
-  </head>
+    <script>console.timeEnd('anga-app')</script>
+</head>
 
   <body>
-      <!--Header-->
-      <header id="banner">
-          <div id="logo">
-              <h1 id="siteTitle">L<i class="wi wi-hail"></i>cal Weather</h1>
-          </div>
-      </header>
-      
-    <div class='container-fluid'>
-        <div class='main'>
-            
-            <div class="row">
-                
-                <!--Left container-->
-                <div class="col-xs-4">
-                    <!--Material Card-->
-                    <div id="material-card">
-                        <div id="material-content">
-                            <div id="material-img"></div>
-                            
-                            <div class="material-divider"></div>
-                            
-                            <div id="material-location-tag">
-                                <p id="city-material"></p>
-                            </div>
-                            
-                        </div>
-                    </div>
-                </div>
-                
-                <!--Right Container-->
-                <div class="col-xs-7">
-                    <!--City Container-->
-                    <div class='row'>
-                        <!--city name-->
-                        <div class='col-xs-1 col-sm-6' id='city'></div>
-                    </div>
-                    
-                    <!--Weather Icons and forecast container-->
-                    <div class='row'>
-                        <!--Icons-->
-                        <div class='col-xs-6'>
-                            <div id='icon'></div>
-                        </div>
-                        
-                        <!--Forecasts-->
-                        <div class='col-xs-4'>
-                            <div class='icons'></div>
-                            <div id='forecast'></div>
-                            <div id='weekdays'></div>
-                        </div>
-                    </div>
-                    
-                    <!--Temp and switch temp unit C/F container-->
-                    <div class='row'>
-                        <!--Temp-->
-                        <div class='col-xs-6'>
-                            <div id='temp'></div>
-                        </div>                
-                        
-                        <!--Switch Button-->
-                        <div class='col-xs-4'>
-                            <div id='switch'></div>
-                        </div>
-                    </div>
-                  
-                    <!--Search city bar-->
-                    <div class='row'>
-                        <!--Search box-->
-                        <div class='col-xs-12'>
-                            <div id='searchbox'>
-                                <input id="search" class="form-control" placeholder='Search for another City..'></input>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-            <!--End Row-->
-            </div>
-      <!--End Main-->
-      </div>
-    <!--End container fluid-->
+    <!--City Container-->
+    <div class='row'>
+        <!--city name-->
+        <div class='col-xs-1 col-sm-6' id='city'></div>
     </div>
-    
-    <footer id="main-footer">
-        <small>Made with <i class="fa fa-music"></i> and <i class="fa fa-coffee"></i> by <a href="http://www.codepen.io/mercury">Mercury</a></small>
-        
-        <!--Navigation bar-->
-        <nav class="nav">
-            <ul>
-                <li><a href="https://www.linkedin.com/in/brianlusina" target="_blank"><i class="fa fa-linkedin fa-2x social"></i></a></li>
-                <li><a href="https://github.com/brianlusina" target="_blank"><i class="fa fa-github fa-2x social"></i></a></li>
-                <li><a href="https://twitter.com/brianlusina" target="_blank"><i class="fa fa-twitter fa-2x social"></i></a></li>
-                <li><a href="" target="_blank"><i class="fa fa-reddit fa-2x social"></i></a></li>
-                <li><a href="https://medium.com/@brianlusina" target="_blank"><i class="fa fa-medium fa-2x social"></i></a></li>
-                <li><a href="https://plus.google.com/102302755150765254402" target="_blank"><i class="fa fa-google-plus fa-2x social"></i></a></li>                    
-            </ul>         
-        </nav>
-    </footer>
-    
-<!--Script-->
-<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-<script src='http://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js'></script>
-<script src="js/index.js"></script>
+
+    <!--Weather Icons and forecast container-->
+    <div class='row'>
+        <!--Icons-->
+        <div class='col-xs-6'>
+            <div id='icon'></div>
+        </div>
+
+        <!--Forecasts-->
+        <div class='col-xs-4'>
+            <div class='icons'></div>
+            <div id='forecast'></div>
+            <div id='weekdays'></div>
+        </div>
+    </div>
+
+    <!--Temp and switch temp unit C/F container-->
+    <div class='row'>
+        <!--Temp-->
+        <div class='col-xs-6'>
+            <div id='temp'></div>
+        </div>                
+
+        <!--Switch Button-->
+        <div class='col-xs-4'>
+            <div id='switch'></div>
+        </div>
+    </div>
+
+    <!--Search city bar-->
+    <div class='row'>
+        <!--Search box-->
+        <div class='col-xs-12'>
+            <div id='searchbox'>
+                <input id="search" class="form-control" placeholder='Search for another City..'></input>
+            </div>
+        </div>
+    </div>
+    <div id="app"></div>
+    <script type="text/javascript" src="/public/bundle.js"></script>
     </body>
 </html>
