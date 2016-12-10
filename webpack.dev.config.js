@@ -29,6 +29,12 @@ module.exports = {
                 loader:"file"
             }
         ]
+    },
+    
+    output:{
+        filename: "bundle.js",
+        publicPath:"/public/",
+        path:path.join(__dirname + "public")
     }
     
 };
