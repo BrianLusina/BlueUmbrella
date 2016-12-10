@@ -4,7 +4,9 @@
   "description": "Tell's you the weather of your current location, and others ",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "start": "webpack-dev-server"
   },
   "repository": {
     "type": "git",
@@ -26,6 +28,7 @@
   },
   "homepage": "https://github.com/BrianLusina/Local-Weather#readme",
   "dependencies": {
+    "express": "^4.14.0",
     "react": "^15.4.1",
     "react-dom": "^15.4.1"
   },
@@ -43,6 +46,9 @@
     "style-loader": "^0.13.1",
     "url-loader": "^0.5.7",
     "webpack": "^1.14.0",
-    "webpack-dev-server": "^1.16.2"
+    "webpack-combine-loaders": "^2.0.3",
+    "webpack-dev-middleware": "^1.8.4",
+    "webpack-dev-server": "^1.16.2",
+    "webpack-hot-middleware": "^2.13.2"
   }
 }

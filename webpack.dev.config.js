@@ -6,6 +6,7 @@ var HTMLWebpackPluginConfig = new HTMLWebpackPlugin({
 });
 
 const path = require("path");
+const webpack = require("webpack");
 
 module.exports = {
     devtool: "eval",
@@ -41,6 +42,13 @@ module.exports = {
         filename: "bundle.js",
         publicPath:"/public/",
         path:path.join(__dirname + "public")
-    }
+    },
+    
+    plugins:[
+        HTMLWebpackPluginConfig,
+        new webpack.optimize.OccurenceOrderPlugin(),
+        new webpack.HotModuleReplacementPlugin(),
+        new webpack.NoErrorsPlugin()
+    ]
     
 };
