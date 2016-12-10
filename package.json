@@ -4,9 +4,10 @@
   "description": "Tell's you the weather of your current location, and others ",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack",
-    "start": "webpack-dev-server"
+      "test": "echo \"Error: no test specified\" && exit 1",
+      "build": "webpack",
+      "start": "webpack-dev-server",
+      "dev": "webpack-dev-server --content-base src --inline --hot"
   },
   "repository": {
     "type": "git",

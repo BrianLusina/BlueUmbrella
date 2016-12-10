@@ -12,16 +12,16 @@ export default class App extends React.Component{
     render(){
         return(
             <div>
-            <Header />
-            <div className='container-fluid'>
-                <div className="main">
-                    <div className="row">
-                        <WeatherCard />    
-                        <Container />
+                <Header />
+                <div className='container-fluid'>
+                    <div className="main">
+                        <div className="row">
+                            <WeatherCard />    
+                            <Container />
+                        </div>
                     </div>
                 </div>
-            </div>
-            <Footer />
+                <Footer />
             </div>
         )
     }

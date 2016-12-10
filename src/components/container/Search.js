@@ -2,7 +2,7 @@ import React from 'react';
 
 export default class Search extends React.Component{
     render(){
-        return{
+        return(
             <div className='row'>
                 <div className='col-xs-12'>
                     <div id='searchbox'>
@@ -10,6 +10,6 @@ export default class Search extends React.Component{
                     </div>
                 </div>
             </div>
-        }
+        )
     }
 }

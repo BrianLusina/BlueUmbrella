@@ -7,10 +7,12 @@ import Search from './Search';
 export default class Container extends React.Component{
     render(){
         return(
-            <CityContainer />
-            <Forecast />
-            <Metrics />
-            <Search />
+            <div>
+                <CityContainer />
+                <Forecast />
+                <Metrics />
+                <Search />
+            </div>
         )
     }
 }
