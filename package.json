@@ -7,7 +7,9 @@
       "test": "echo \"Error: no test specified\" && exit 1",
       "build": "webpack",
       "start": "webpack-dev-server",
-      "dev": "webpack-dev-server --content-base src --inline --hot"
+      "dev": "webpack-dev-server --content-base src --inline --hot",
+      "build-production": "NODE_ENV=production webpack --config ./webpack.prod.config.js --progress --colors",
+      "start-production": "node app.js"
   },
   "repository": {
     "type": "git",
