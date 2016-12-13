@@ -1,5 +1,5 @@
 import React from 'react'
-import Geolocation from './Geolocation';
+import jQuery from 'jquery';
 
 /**
  * City container will be updated by Search Component and also by the current user location
@@ -13,6 +13,7 @@ export default class CityContainer extends React.Component{
             city : "",
             countryCode: ""
         }
+        this._getLocation = this._getLocation.bind(this);
     }
 
     //updates the state of this component when
@@ -28,14 +29,27 @@ export default class CityContainer extends React.Component{
     }
 
     componentDidMount(){
-        Geolocation();
-        this.setState({
-            city: Geolocation.city,
-            countryCode: Geolocation.countryCode
-        });
-        console.log("city ", Geolocation.city);
-        console.log(this.state.city, this.state.countryCode);
+        this._getLocation();
     }
+
+    _getLocation = () => {
+    jQuery.ajax({
+        url:'http://ip-api.com/json',
+        method:'GET',
+        data:{},
+        dataType:'json',
+        success: (data) => {
+        this.setState({
+            city: data.city,
+            countryCode: data.countryCode
+        });
+        },
+        error: (err)=> {
+            console.log(err)
+        }
+    });
+}
+
 }
 
 // // the types of props this component must receive
