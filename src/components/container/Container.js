@@ -4,6 +4,7 @@ import Forecast from './Forecast';
 import Metrics from './Metrics';
 import Search from './Search';
 
+// entry point to this container
 export default class Container extends React.Component{
     render(){
         return(

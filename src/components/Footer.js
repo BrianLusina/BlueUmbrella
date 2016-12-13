@@ -28,9 +28,9 @@ export default class Footer extends React.Component{
             <footer id="main-footer">
                 <small>Made with <i className="fa fa-music"></i> and <i className="fa fa-coffee"></i> by <a href="http://www.codepen.io/thelusina">The Lusina</a></small>
                 <nav className="nav">
-            <ul>{socialMap}</ul>         
-        </nav>
-    </footer>
+                    <ul>{socialMap}</ul>         
+                </nav>
+            </footer>
         )
     }
 }

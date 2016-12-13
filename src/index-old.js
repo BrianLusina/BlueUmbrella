@@ -16,25 +16,25 @@ $(document).ready(function(){
     });
 });
 
-/*Get user location*/
-function getLocation(){
-    //perform an asynchronous HTTP request
-    $.ajax({
-        url:'http://ip-api.com/json',
-        method:'GET',
-        data:{},
-        dataType:'json',
-        success: function(data){
-            $city = data.city+','+data.countryCode;
-            setCurrent($city);
-            setForecast($city);
-            ;
-            },
-        error: function(err){
-            console.log(err)
-        }
-    });
-}
+// /*Get user location*/
+// function getLocation(){
+//     //perform an asynchronous HTTP request
+//     $.ajax({
+//         url:'http://ip-api.com/json',
+//         method:'GET',
+//         data:{},
+//         dataType:'json',
+//         success: function(data){
+//             $city = data.city+','+data.countryCode;
+//             setCurrent($city);
+//             setForecast($city);
+//             ;
+//             },
+//         error: function(err){
+//             console.log(err)
+//         }
+//     });
+// }
 
 /*Set current city from the getLocation() function*/
 function setCurrent(city){
