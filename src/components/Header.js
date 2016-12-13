@@ -9,7 +9,7 @@ export default class Header extends React.Component{
         return(
             <header id="banner">
                 <div id="logo">
-                    <h1 id="siteTitle">L<i class="wi wi-hail"></i>cal Weather</h1>
+                    <h1 id="siteTitle">L<i className="wi wi-hail"></i>cal Weather</h1>
                 </div>
             </header>
         )
