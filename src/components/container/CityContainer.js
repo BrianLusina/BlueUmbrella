@@ -1,4 +1,5 @@
 import React from 'react'
+import GeoLocation from './Geolocation';
 
 /**
  * City container will be updated by Search Component and also by the current user location
