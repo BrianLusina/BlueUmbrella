@@ -1,5 +1,5 @@
 import React from 'react'
-import GeoLocation from './Geolocation';
+import Geolocation from './Geolocation';
 
 /**
  * City container will be updated by Search Component and also by the current user location
@@ -9,14 +9,14 @@ import GeoLocation from './Geolocation';
 export default class CityContainer extends React.Component{
     constructor(){
         super();
-        this.state ={
-            city : ""
+        this.state = {
+            city : "",
+            countryCode: ""
         }
     }
 
     //updates the state of this component when
     componentWillReceiveProps(){
-        this.setState({city: this.props.currentCity})
     }
 
     render(){
@@ -28,11 +28,18 @@ export default class CityContainer extends React.Component{
     }
 
     componentDidMount(){
-        GeoLocation();
+        Geolocation();
+        this.setState({
+            city: Geolocation.city,
+            countryCode: Geolocation.countryCode
+        });
+        console.log("city ", Geolocation.city);
+        console.log(this.state.city, this.state.countryCode);
     }
 }
 
-// the types of props this component must receive
-CityContainer.propTypes = {
-    currentCity: React.PropTypes.string.isRequired
-}
+// // the types of props this component must receive
+// CityContainer.propTypes = {
+//     currentCity: React.PropTypes.string.isRequired,
+//     countryCode: React.PropTypes.string.isRequired
+// }
