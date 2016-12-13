@@ -40,10 +40,10 @@ export default class CityContainer extends React.Component{
             data:{},
             dataType:'json',
             success: (data) => {
-                this.setState({
-                    city: data.city,
-                    countryCode: data.countryCode});
-                },
+                let city = data.city;
+                let countryCode = data.countryCode;
+                this.setState({ city, countryCode});
+            },
             error: (err)=> {
                 console.log(err)
             }
