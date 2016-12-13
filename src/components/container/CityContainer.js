@@ -30,23 +30,23 @@ export default class CityContainer extends React.Component{
 
     componentDidMount(){
         this._getLocation();
+        console.log("city ", this.state.city);
     }
 
-    _getLocation = () => {
-    jQuery.ajax({
-        url:'http://ip-api.com/json',
-        method:'GET',
-        data:{},
-        dataType:'json',
-        success: (data) => {
-        this.setState({
-            city: data.city,
-            countryCode: data.countryCode
-        });
-        },
-        error: (err)=> {
-            console.log(err)
-        }
+    _getLocation(){
+        jQuery.ajax({
+            url:'http://ip-api.com/json',
+            method:'GET',
+            data:{},
+            dataType:'json',
+            success: (data) => {
+                this.setState({
+                    city: data.city,
+                    countryCode: data.countryCode});
+                },
+            error: (err)=> {
+                console.log(err)
+            }
     });
 }
 
