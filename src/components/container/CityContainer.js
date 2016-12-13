@@ -26,6 +26,10 @@ export default class CityContainer extends React.Component{
             </div>
         )
     }
+
+    componentDidMount(){
+        GeoLocation();
+    }
 }
 
 // the types of props this component must receive
