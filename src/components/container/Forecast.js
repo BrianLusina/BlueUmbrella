@@ -46,10 +46,9 @@ export default class Forecast extends React.Component{
             method: 'GET',
             data: {},
             dataType: 'json',
-            success: function (data){
+            success: (data) => {
                 //gets the current day
                 var dayCounter= this.state.date.getDay();
-                console.log(dayCounter);
                 for (var i = 0; i <= 4; i++){
                     if (dayCounter >= this.state.weekday.length-1){
                         dayCounter = 0;
