@@ -12,19 +12,14 @@ export default class Container extends React.Component{
     }
 
     render(){
-        console.log(this.props.city, this.props.code)
         return(
             <div>
                 <CityView city={this.props.city} code={this.props.code}/>
-                <Forecast />
+                <Forecast city={this.props.city} />
                 <Metrics />
                 <Search />
             </div>
         )
-    }
-
-    componentWillReceiveProps(nextProps){
-        console.log("Props:", nextProps);
     }
 }
 

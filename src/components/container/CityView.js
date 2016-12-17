@@ -10,10 +10,6 @@ export default class CityView extends React.Component{
         super();
     }
 
-    //updates the state of this component when
-    componentWillReceiveProps(){
-    }
-
     render(){
         return(
             <div className='row'>
@@ -21,10 +17,6 @@ export default class CityView extends React.Component{
             </div>
         )
     }
-
-    componentDidMount(){
-    }
-
 }
 
 // the types of props this component must receive
