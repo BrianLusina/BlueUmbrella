@@ -25,6 +25,7 @@ export default class Forecast extends React.Component{
     }
 
     render(){
+        console.log(this.state.nextWeekdays);
         return(
             <div className='row'>
                 <div className='col-xs-6'>
@@ -53,21 +54,18 @@ export default class Forecast extends React.Component{
                     if (dayCounter >= this.state.weekday.length-1){
                         dayCounter = 0;
                     }else {
-                        dayCounter+=1
+                        dayCounter += 1;
                     }
                     if (data.list[i].weather[0].main !== ''){
                         //sets the forecast for the next 5 days
-                        this.setState({
-                            nextWeekdays: this.state.weekday[dayCounter],
-                            icons: this._getIcon(data.list[i].weather[0].main)+'<br/>',
-                        })
+                        this.state.nextWeekdays.push(this.state.weekday[dayCounter]);
+                        this.state.icons.push(this._getIcon(data.list[i].weather[0].main) +'<br/>');
                         // $('#weekdays').append(weekday[dayCounter]+'<br/>');   
                         //updates the icons for the next 5 days
                     }
+
                     //sets the temp for the next 5 days
-                    this.setState({
-                        tempData: this._inCel(data.list[i].temp.max)+"<br/>"
-                    });
+                    this.state.tempData.push(this._inCel(data.list[i].temp.max)+"<br/>");
                 }
             }
         });

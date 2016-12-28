@@ -4,12 +4,14 @@
   "description": "Tell's you the weather of your current location, and others ",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "build-dev": "webpack",
     "start-dev": "webpack-dev-server",
     "dev": "webpack-dev-server --content-base src --inline --hot",
     "build": "NODE_ENV=production webpack --config ./webpack.prod.config.js --progress --colors",
-    "start": "node app.js"
+    "start": "node app.js",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "deploy": "npm run build&&gh-pages -d build"
   },
   "repository": {
     "type": "git",
@@ -28,7 +30,7 @@
   "bugs": {
     "url": "https://github.com/BrianLusina/Local-Weather/issues"
   },
-  "homepage": "https://github.com/BrianLusina/Local-Weather#readme",
+  "homepage": "https://brianlusina.github.io/Local-Weather",
   "dependencies": {
     "express": "^4.14.0",
     "react": "^15.4.1",
@@ -44,10 +46,12 @@
     "babel-preset-stage-0": "^6.16.0",
     "css-loader": "^0.26.1",
     "file-loader": "^0.9.0",
+    "gh-pages": "^0.12.0",
     "html-webpack-plugin": "^2.24.1",
     "jQuery": "^1.7.4",
     "jquery": "^3.1.1",
     "node-css": "^0.1.0",
+    "react-scripts": "^0.8.4",
     "style-loader": "^0.13.1",
     "url-loader": "^0.5.7",
     "webpack": "^1.14.0",

@@ -40,8 +40,8 @@ module.exports = {
     
     output:{
         filename: "bundle.js",
-        publicPath:"/public/",
-        path:path.join(__dirname + "public")
+        publicPath:"/build/",
+        path:path.join(__dirname + "build")
     },
     
     plugins:[

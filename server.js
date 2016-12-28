@@ -5,9 +5,9 @@ module.exports = {
     app: ()=>{
         const app = express();
         const indexPath = path.join(__dirname, "index.html");
-        const publicPath = express.static(path.join(__dirname, "public"));
+        const publicPath = express.static(path.join(__dirname, "build"));
         
-        app.use("/public", publicPath);
+        app.use("/build", publicPath);
         app.get("/", (_, res) => {
             res.sendFile(indexPath);
         });
