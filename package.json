@@ -1,63 +1,18 @@
 {
-  "name": "local-weather",
-  "version": "2.0.0",
-  "description": "Tell's you the weather of your current location, and others ",
-  "main": "index.js",
-  "scripts": {
-    "build-dev": "webpack",
-    "start-dev": "webpack-dev-server",
-    "dev": "webpack-dev-server --content-base src --inline --hot",
-    "build": "NODE_ENV=production webpack --config ./webpack.prod.config.js --progress --colors",
-    "start": "node app.js",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject",
-    "deploy": "npm run build&&gh-pages -d build"
+  "name": "blue-umbrella",
+  "version": "0.1.0",
+  "private": true,
+  "devDependencies": {
+    "react-scripts": "0.8.4"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/BrianLusina/Local-Weather.git"
-  },
-  "keywords": [
-    "Local",
-    "Weather",
-    "Anga",
-    "Weather",
-    "React Weather app",
-    "Weather App"
-  ],
-  "author": "The Lusina",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/BrianLusina/Local-Weather/issues"
-  },
-  "homepage": "https://brianlusina.github.io/Local-Weather",
   "dependencies": {
-    "express": "^4.14.0",
     "react": "^15.4.1",
     "react-dom": "^15.4.1"
   },
-  "devDependencies": {
-    "babel-cli": "^6.18.0",
-    "babel-core": "^6.20.0",
-    "babel-loader": "^6.2.9",
-    "babel-preset-es2015": "^6.18.0",
-    "babel-preset-react": "^6.16.0",
-    "babel-preset-react-hmre": "^1.1.1",
-    "babel-preset-stage-0": "^6.16.0",
-    "css-loader": "^0.26.1",
-    "file-loader": "^0.9.0",
-    "gh-pages": "^0.12.0",
-    "html-webpack-plugin": "^2.24.1",
-    "jQuery": "^1.7.4",
-    "jquery": "^3.1.1",
-    "node-css": "^0.1.0",
-    "react-scripts": "^0.8.4",
-    "style-loader": "^0.13.1",
-    "url-loader": "^0.5.7",
-    "webpack": "^1.14.0",
-    "webpack-combine-loaders": "^2.0.3",
-    "webpack-dev-middleware": "^1.8.4",
-    "webpack-dev-server": "^1.16.2",
-    "webpack-hot-middleware": "^2.13.2"
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
   }
 }
