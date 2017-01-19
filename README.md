@@ -1,5 +1,7 @@
 # Local Weather (Hali Ya Anga)
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/501755eee53545508471237fd52fed3d)](https://www.codacy.com/app/BrianLusina/BlueUmbrella-react?utm_source=github.com&utm_medium=referral&utm_content=BrianLusina/BlueUmbrella-react&utm_campaign=badger)
+
 Simple web application that displays the weather of the current user location. There are 2 versions of this app. One built on ReactJS library and another in jQuery. Functionality remains the same with a bit of differences in UI.
 
 
