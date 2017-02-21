@@ -5,6 +5,7 @@
 [![dependencies Status](https://david-dm.org/BrianLusina/BlueUmbrella-react/status.svg)](https://david-dm.org/BrianLusina/BlueUmbrella-react)
 [![devDependencies Status](https://david-dm.org/BrianLusina/BlueUmbrella-react/dev-status.svg)](https://david-dm.org/BrianLusina/BlueUmbrella-react?type=dev)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/501755eee53545508471237fd52fed3d)](https://www.codacy.com/app/BrianLusina/BlueUmbrella-react?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=BrianLusina/BlueUmbrella-react&amp;utm_campaign=Badge_Grade)
+[![codecov](https://codecov.io/gh/BrianLusina/BlueUmbrella-react/branch/master/graph/badge.svg)](https://codecov.io/gh/BrianLusina/BlueUmbrella-react)
 
 Simple web application that displays the weather of the current user location. There are 2 versions of this app. One built on ReactJS library and another in jQuery. Functionality remains the same with a bit of differences in UI.
 

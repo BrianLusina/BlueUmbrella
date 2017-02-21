@@ -37,7 +37,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "test:cover": "npm run test -- --coverage",
+    "test:coverage": "npm test -- --coverage",
     "send-cover-report": "codacy-coverage && rm -rf ./coverage",
     "eject": "react-scripts eject"
   }
