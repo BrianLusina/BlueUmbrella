@@ -7,7 +7,6 @@ export default class MorningWeather extends Component{
                 <div className="icon">
                     <i className="sun"></i>
                 </div>
-                
                 <div className="content">
                     <h3>Morning</h3>
                     <div className="degrees">- 1</div>

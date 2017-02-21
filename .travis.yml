@@ -24,11 +24,6 @@ script:
   - npm run test
   - npm run test:coverage
   - npm run send-cover-report
-  - codecov
 
 after_success:
   - bash <(curl -s https://codecov.io/bash)
-
-before_deploy:
-  - npm run build
-  - npm i pushstate-server -g

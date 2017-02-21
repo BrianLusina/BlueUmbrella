@@ -19,7 +19,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        <main>  
+        <main>
           <div className="device">
             <header></header>
             <section>
@@ -30,6 +30,14 @@ class App extends Component {
             </section>
           </div>
         </main>
+        <aside>
+          <div class="meta">    
+            <h1>React Weather<br/>App Concept</h1>
+            <p>Dribbble Rework<br/>Original shot by 
+            <a href="https://dribbble.com/shots/1824088-GIF-for-the-Weather-App">Sergey Valiukh</a></p>
+            <p>Hover over each filter to see the effect.<br/>Works best in Chrome.</p>
+          </div>
+        </aside>
       </div>
     );
   }

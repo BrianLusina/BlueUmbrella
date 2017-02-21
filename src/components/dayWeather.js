@@ -8,7 +8,6 @@ export default class DayWeather extends Component{
                     <i className="sun"></i>
                     <i className="cloud windy"></i>
                 </div>
-                
                 <div className="content">
                     <h3>Day</h3>
                     <div className="degrees">+ 3</div>
