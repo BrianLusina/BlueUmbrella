@@ -1,12 +1,11 @@
-# Local Weather (Hali Ya Anga)
+# BlueUmbrella
+
+[![Build Status](https://travis-ci.org/BrianLusina/BlueUmbrella-react.svg?branch=master)](https://travis-ci.org/BrianLusina/BlueUmbrella-react)
+[![CircleCI](https://circleci.com/gh/BrianLusina/BlueUmbrella-react.svg?style=svg)](https://circleci.com/gh/BrianLusina/BlueUmbrella-react)
+[![dependencies Status](https://david-dm.org/BrianLusina/BlueUmbrella-react/status.svg)](https://david-dm.org/BrianLusina/BlueUmbrella-react)
+[![devDependencies Status](https://david-dm.org/BrianLusina/BlueUmbrella-react/dev-status.svg)](https://david-dm.org/BrianLusina/BlueUmbrella-react?type=dev)
 
 Simple web application that displays the weather of the current user location. There are 2 versions of this app. One built on ReactJS library and another in jQuery. Functionality remains the same with a bit of differences in UI.
-
-
-Fulfill the following user stories:
-+ User can see the weather in their current location
-+ User can see a different icon or background image (e.g. snowy mountain, hot desert) depending on the weather
-+ User can push a button to toggle between Fahrenheit and Celsius
 
 ## APIs used
 
@@ -14,13 +13,6 @@ Fulfill the following user stories:
 + [IP-API](http://ip-api.com/) is used to obtain details of the current user location 
 + [GeoBytes](http://geobytes.com/) API is used to obtain locate other cities that the user searches for.
 
-
-Versions:
-
-1. The ReacJS version can be found [here](https://haliyaanga.herokuapp.com/)
-2. jQuery version is [here](http://hali-ya-anga.bitballoon.com/)
-
-To interact with the React version simply do the follogin:
 
 1. Install the dependencies in the project directory
 
