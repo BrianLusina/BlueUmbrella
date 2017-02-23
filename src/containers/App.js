@@ -4,6 +4,7 @@ import MorningWeather from '../components/morningWeather';
 import DayWeather from '../components/dayWeather';
 import EveningWeather from '../components/eveningWeather';
 import NightWeather from '../components/nightWeather';
+import { currentLocation } from '../api/api';
 
 class App extends Component {
   constructor(){
@@ -31,7 +32,7 @@ class App extends Component {
           </div>
         </main>
         <aside>
-          <div class="meta">    
+          <div className="meta">    
             <h1>React Weather<br/>App Concept</h1>
             <p>Dribbble Rework<br/>Original shot by 
             <a href="https://dribbble.com/shots/1824088-GIF-for-the-Weather-App">Sergey Valiukh</a></p>
@@ -43,7 +44,9 @@ class App extends Component {
   }
 
   componentDidMount(){
-      this._getLocation();
+      currentLocation(this.state.city, this.state.countryCode);
+      console.log(currentLocation(this.state.city, this.state.countryCode));
+      //this._getLocation();
   }
 
     // get current user location
