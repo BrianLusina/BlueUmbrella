@@ -21,7 +21,7 @@ class App extends Component {
       <div>
         <main>
           <div className="device">
-            <header></header>
+            <header id="location_text">{this.state.city}, {this.state.countryCode}</header>
             <section>
               <MorningWeather location={this.state.city}/>
               <DayWeather location={this.state.city}/>
