@@ -4,7 +4,7 @@ import MorningWeather from '../components/morningWeather';
 import DayWeather from '../components/dayWeather';
 import EveningWeather from '../components/eveningWeather';
 import NightWeather from '../components/nightWeather';
-import { currentLocation, weatherForecast, weatherForecastForLocation } from '../api/api';
+import { weatherForecastForLocation } from '../api/api';
 
 class App extends Component {
   constructor(){
@@ -14,6 +14,7 @@ class App extends Component {
           city : "",
           countryCode: ""
       };
+
       this._getLocation = this._getLocation.bind(this);
   }
 
@@ -44,8 +45,6 @@ class App extends Component {
   }
 
   componentDidMount(){
-      currentLocation(this.state.city, this.state.countryCode);
-      console.log(weatherForecastForLocation(this.state.city));
       this._getLocation();
   }
 
@@ -60,6 +59,7 @@ class App extends Component {
               let city = data.city;
               let countryCode = data.countryCode;
               this.setState({ city, countryCode});
+              weatherForecastForLocation(this.state.city);
           },
           error: (err)=> {
               console.log(err)
