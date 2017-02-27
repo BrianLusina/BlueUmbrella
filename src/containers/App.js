@@ -4,7 +4,7 @@ import MorningWeather from '../components/morningWeather';
 import DayWeather from '../components/dayWeather';
 import EveningWeather from '../components/eveningWeather';
 import NightWeather from '../components/nightWeather';
-import { currentLocation } from '../api/api';
+import { currentLocation, weatherForecast, weatherForecastForLocation } from '../api/api';
 
 class App extends Component {
   constructor(){
@@ -13,7 +13,7 @@ class App extends Component {
       this.state = {
           city : "",
           countryCode: ""
-      }
+      };
       this._getLocation = this._getLocation.bind(this);
   }
 
@@ -45,8 +45,8 @@ class App extends Component {
 
   componentDidMount(){
       currentLocation(this.state.city, this.state.countryCode);
-      console.log(currentLocation(this.state.city, this.state.countryCode));
-      //this._getLocation();
+      console.log(weatherForecastForLocation(this.state.city));
+      this._getLocation();
   }
 
     // get current user location

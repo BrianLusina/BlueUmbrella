@@ -24,4 +24,4 @@ export default class DayWeather extends Component{
 
 DayWeather.propTypes = {
     location : PropTypes.object.isRequired
-}
+};
