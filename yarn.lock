@@ -8,6 +8,10 @@
   dependencies:
     regenerator-runtime "^0.13.2"
 
+"@tootallnate/once@1":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@tootallnate/once/-/once-1.0.0.tgz#9c13c2574c92d4503b005feca8f2e16cc1611506"
+
 abab@^1.0.0:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/abab/-/abab-1.0.3.tgz#b81de5f7274ec4e756d797cd834f303642724e5d"
@@ -50,6 +54,16 @@ acorn@^4.0.1:
 acorn@^5.5.0:
   version "5.7.3"
   resolved "https://registry.yarnpkg.com/acorn/-/acorn-5.7.3.tgz#67aa231bf8812974b85235a96771eb6bd07ea279"
+
+agent-base@5:
+  version "5.1.1"
+  resolved "https://registry.yarnpkg.com/agent-base/-/agent-base-5.1.1.tgz#e8fb3f242959db44d63be665db7a8e739537a32c"
+
+agent-base@6:
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/agent-base/-/agent-base-6.0.0.tgz#5d0101f19bbfaed39980b22ae866de153b93f09a"
+  dependencies:
+    debug "4"
 
 ajv-keywords@^1.0.0:
   version "1.5.0"
@@ -151,7 +165,7 @@ argparse@^1.0.7:
   dependencies:
     sprintf-js "~1.0.2"
 
-argv@>=0.0.2:
+argv@0.0.2:
   version "0.0.2"
   resolved "https://registry.yarnpkg.com/argv/-/argv-0.0.2.tgz#ecbd16f8949b157183711b1bda334f37840185ab"
 
@@ -1381,14 +1395,15 @@ code-point-at@^1.0.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/code-point-at/-/code-point-at-1.1.0.tgz#0d070b4d043a5bea33a2f1a40e2edb3d9a4ccf77"
 
-codecov@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/codecov/-/codecov-1.0.1.tgz#97260ceac0e96b8eda8d562006558a53a139dffd"
+codecov@^3.6.5:
+  version "3.6.5"
+  resolved "https://registry.yarnpkg.com/codecov/-/codecov-3.6.5.tgz#d73ce62e8a021f5249f54b073e6f2d6a513f172a"
   dependencies:
-    argv ">=0.0.2"
-    execSync "1.0.2"
-    request ">=2.42.0"
-    urlgrey ">=0.4.0"
+    argv "0.0.2"
+    ignore-walk "3.0.3"
+    js-yaml "3.13.1"
+    teeny-request "6.0.1"
+    urlgrey "0.4.4"
 
 color-convert@^1.3.0:
   version "1.8.2"
@@ -1783,6 +1798,12 @@ debug@2.2.0, debug@~2.2.0:
   resolved "https://registry.yarnpkg.com/debug/-/debug-2.2.0.tgz#f87057e995b1a1f6ae6a4960664137bc56f039da"
   dependencies:
     ms "0.7.1"
+
+debug@4:
+  version "4.1.1"
+  resolved "https://registry.yarnpkg.com/debug/-/debug-4.1.1.tgz#3b72260255109c6b589cee050f1d516139664791"
+  dependencies:
+    ms "^2.1.1"
 
 debug@^2.1.0, debug@^2.1.1, debug@^2.2.0:
   version "2.6.0"
@@ -2439,6 +2460,10 @@ esprima@2.7.x, esprima@^2.6.0, esprima@^2.7.1:
   version "2.7.3"
   resolved "https://registry.yarnpkg.com/esprima/-/esprima-2.7.3.tgz#96e3b70d5779f6ad49cd032673d1c312767ba581"
 
+esprima@^4.0.0:
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/esprima/-/esprima-4.0.1.tgz#13b04cdb3e6c5d19df91ab6987a8695619b0aa71"
+
 esprima@~3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/esprima/-/esprima-3.0.0.tgz#53cf247acda77313e551c3aa2e73342d3fb4f7d9"
@@ -2512,12 +2537,6 @@ exec-sh@^0.2.0:
   resolved "https://registry.yarnpkg.com/exec-sh/-/exec-sh-0.2.0.tgz#14f75de3f20d286ef933099b2ce50a90359cef10"
   dependencies:
     merge "^1.1.3"
-
-execSync@1.0.2:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/execSync/-/execSync-1.0.2.tgz#1f42eda582225180053224ecdd3fd1960fdb3139"
-  dependencies:
-    temp "~0.5.1"
 
 execa@^0.5.0:
   version "0.5.1"
@@ -3025,10 +3044,6 @@ graceful-fs@^4.1.6, graceful-fs@^4.1.9:
   version "4.1.11"
   resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-4.1.11.tgz#0e8bdfe4d1ddb8854d64e04ea7c00e2a026e5658"
 
-graceful-fs@~1:
-  version "1.2.3"
-  resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-1.2.3.tgz#15a4806a57547cb2d2dbf27f42e89a8c3451b364"
-
 "graceful-readlink@>= 1.0.0":
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/graceful-readlink/-/graceful-readlink-1.0.1.tgz#4cafad76bc62f02fa039b2f94e9a3dd3a391a725"
@@ -3228,6 +3243,14 @@ http-errors@~1.5.0:
     setprototypeof "1.0.2"
     statuses ">= 1.3.1 < 2"
 
+http-proxy-agent@^4.0.0:
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/http-proxy-agent/-/http-proxy-agent-4.0.1.tgz#8a8c8ef7f5932ccf953c296ca8291b95aa74aa3a"
+  dependencies:
+    "@tootallnate/once" "1"
+    agent-base "6"
+    debug "4"
+
 http-proxy-middleware@0.17.2, http-proxy-middleware@~0.17.1:
   version "0.17.2"
   resolved "https://registry.yarnpkg.com/http-proxy-middleware/-/http-proxy-middleware-0.17.2.tgz#572d517a6d2fb1063a469de294eed96066352007"
@@ -3264,6 +3287,13 @@ https-browserify@0.0.1:
   version "0.0.1"
   resolved "https://registry.yarnpkg.com/https-browserify/-/https-browserify-0.0.1.tgz#3f91365cabe60b77ed0ebba24b454e3e09d95a82"
 
+https-proxy-agent@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/https-proxy-agent/-/https-proxy-agent-4.0.0.tgz#702b71fb5520a132a66de1f67541d9e62154d82b"
+  dependencies:
+    agent-base "5"
+    debug "4"
+
 iconv-lite@0.4.13:
   version "0.4.13"
   resolved "https://registry.yarnpkg.com/iconv-lite/-/iconv-lite-0.4.13.tgz#1f88aba4ab0b1508e8312acc39345f36e992e2f2"
@@ -3279,6 +3309,12 @@ icss-replace-symbols@^1.0.2:
 ieee754@^1.1.4:
   version "1.1.8"
   resolved "https://registry.yarnpkg.com/ieee754/-/ieee754-1.1.8.tgz#be33d40ac10ef1926701f6f08a2d86fbfd1ad3e4"
+
+ignore-walk@3.0.3:
+  version "3.0.3"
+  resolved "https://registry.yarnpkg.com/ignore-walk/-/ignore-walk-3.0.3.tgz#017e2447184bfeade7c238e4aefdd1e8f95b1e37"
+  dependencies:
+    minimatch "^3.0.4"
 
 ignore@^3.1.5:
   version "3.2.0"
@@ -3979,12 +4015,12 @@ js-types@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/js-types/-/js-types-1.0.0.tgz#d242e6494ed572ad3c92809fc8bed7f7687cbf03"
 
-js-yaml@3.x, js-yaml@^3.4.3, js-yaml@^3.5.1, js-yaml@^3.7.0:
-  version "3.7.0"
-  resolved "https://registry.yarnpkg.com/js-yaml/-/js-yaml-3.7.0.tgz#5c967ddd837a9bfdca5f2de84253abe8a1c03b80"
+js-yaml@3.13.1, js-yaml@3.x, js-yaml@^3.4.3, js-yaml@^3.5.1, js-yaml@^3.7.0:
+  version "3.13.1"
+  resolved "https://registry.yarnpkg.com/js-yaml/-/js-yaml-3.13.1.tgz#aff151b30bfdfa8e49e05da22e7415e9dfa37847"
   dependencies:
     argparse "^1.0.7"
-    esprima "^2.6.0"
+    esprima "^4.0.0"
 
 js-yaml@~3.6.1:
   version "3.6.1"
@@ -4647,6 +4683,10 @@ node-fetch@^1.0.1:
   dependencies:
     encoding "^0.1.11"
     is-stream "^1.0.1"
+
+node-fetch@^2.2.0:
+  version "2.6.0"
+  resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-2.6.0.tgz#e633456386d4aa55863f676a7ab0daa8fdecb0fd"
 
 node-int64@^0.4.0:
   version "0.4.0"
@@ -5961,31 +6001,6 @@ request-promise@^4.x:
     stealthy-require "^1.1.1"
     tough-cookie "^2.3.3"
 
-request@>=2.42.0, request@^2.83.0:
-  version "2.88.0"
-  resolved "https://registry.yarnpkg.com/request/-/request-2.88.0.tgz#9c2fca4f7d35b592efe57c7f0a55e81052124fef"
-  dependencies:
-    aws-sign2 "~0.7.0"
-    aws4 "^1.8.0"
-    caseless "~0.12.0"
-    combined-stream "~1.0.6"
-    extend "~3.0.2"
-    forever-agent "~0.6.1"
-    form-data "~2.3.2"
-    har-validator "~5.1.0"
-    http-signature "~1.2.0"
-    is-typedarray "~1.0.0"
-    isstream "~0.1.2"
-    json-stringify-safe "~5.0.1"
-    mime-types "~2.1.19"
-    oauth-sign "~0.9.0"
-    performance-now "^2.1.0"
-    qs "~6.5.2"
-    safe-buffer "^5.1.2"
-    tough-cookie "~2.4.3"
-    tunnel-agent "^0.6.0"
-    uuid "^3.3.2"
-
 request@^2.55.0, request@^2.79.0:
   version "2.79.0"
   resolved "https://registry.yarnpkg.com/request/-/request-2.79.0.tgz#4dfe5bf6be8b8cdc37fcf93e04b65577722710de"
@@ -6010,6 +6025,31 @@ request@^2.55.0, request@^2.79.0:
     tough-cookie "~2.3.0"
     tunnel-agent "~0.4.1"
     uuid "^3.0.0"
+
+request@^2.83.0:
+  version "2.88.0"
+  resolved "https://registry.yarnpkg.com/request/-/request-2.88.0.tgz#9c2fca4f7d35b592efe57c7f0a55e81052124fef"
+  dependencies:
+    aws-sign2 "~0.7.0"
+    aws4 "^1.8.0"
+    caseless "~0.12.0"
+    combined-stream "~1.0.6"
+    extend "~3.0.2"
+    forever-agent "~0.6.1"
+    form-data "~2.3.2"
+    har-validator "~5.1.0"
+    http-signature "~1.2.0"
+    is-typedarray "~1.0.0"
+    isstream "~0.1.2"
+    json-stringify-safe "~5.0.1"
+    mime-types "~2.1.19"
+    oauth-sign "~0.9.0"
+    performance-now "^2.1.0"
+    qs "~6.5.2"
+    safe-buffer "^5.1.2"
+    tough-cookie "~2.4.3"
+    tunnel-agent "^0.6.0"
+    uuid "^3.3.2"
 
 require-directory@^2.1.1:
   version "2.1.1"
@@ -6086,12 +6126,6 @@ rimraf@^2.2.8, rimraf@^2.4.3, rimraf@^2.4.4, rimraf@~2.5.1, rimraf@~2.5.4:
   resolved "https://registry.yarnpkg.com/rimraf/-/rimraf-2.5.4.tgz#96800093cbf1a0c86bd95b4625467535c29dfa04"
   dependencies:
     glob "^7.0.5"
-
-rimraf@~2.1.4:
-  version "2.1.4"
-  resolved "https://registry.yarnpkg.com/rimraf/-/rimraf-2.1.4.tgz#5a6eb62eeda068f51ede50f29b3e5cd22f3d9bb2"
-  optionalDependencies:
-    graceful-fs "~1"
 
 ripemd160@0.2.0:
   version "0.2.0"
@@ -6360,6 +6394,12 @@ stream-cache@~0.0.1:
   version "0.0.2"
   resolved "https://registry.yarnpkg.com/stream-cache/-/stream-cache-0.0.2.tgz#1ac5ad6832428ca55667dbdee395dad4e6db118f"
 
+stream-events@^1.0.5:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/stream-events/-/stream-events-1.0.5.tgz#bbc898ec4df33a4902d892333d47da9bf1c406d5"
+  dependencies:
+    stubs "^3.0.0"
+
 stream-http@^2.3.1:
   version "2.5.0"
   resolved "https://registry.yarnpkg.com/stream-http/-/stream-http-2.5.0.tgz#585eee513217ed98fe199817e7313b6f772a6802"
@@ -6461,6 +6501,10 @@ strip-json-comments@~2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/strip-json-comments/-/strip-json-comments-2.0.1.tgz#3c531942e908c2697c0ec344858c286c7ca0a60a"
 
+stubs@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/stubs/-/stubs-3.0.0.tgz#e8d2ba1fa9c90570303c030b6900f7d5f89abe5b"
+
 style-loader@0.13.1:
   version "0.13.1"
   resolved "https://registry.yarnpkg.com/style-loader/-/style-loader-0.13.1.tgz#468280efbc0473023cd3a6cd56e33b5a1d7fc3a9"
@@ -6543,11 +6587,15 @@ tar@~2.2.1:
     fstream "^1.0.12"
     inherits "2"
 
-temp@~0.5.1:
-  version "0.5.1"
-  resolved "https://registry.yarnpkg.com/temp/-/temp-0.5.1.tgz#77ab19c79aa7b593cbe4fac2441768cad987b8df"
+teeny-request@6.0.1:
+  version "6.0.1"
+  resolved "https://registry.yarnpkg.com/teeny-request/-/teeny-request-6.0.1.tgz#9b1f512cef152945827ba7e34f62523a4ce2c5b0"
   dependencies:
-    rimraf "~2.1.4"
+    http-proxy-agent "^4.0.0"
+    https-proxy-agent "^4.0.0"
+    node-fetch "^2.2.0"
+    stream-events "^1.0.5"
+    uuid "^3.3.2"
 
 test-exclude@^2.1.1:
   version "2.1.3"
@@ -6793,7 +6841,7 @@ url@^0.11.0:
     punycode "1.3.2"
     querystring "0.2.0"
 
-urlgrey@>=0.4.0:
+urlgrey@0.4.4:
   version "0.4.4"
   resolved "https://registry.yarnpkg.com/urlgrey/-/urlgrey-0.4.4.tgz#892fe95960805e85519f1cd4389f2cb4cbb7652f"
 
