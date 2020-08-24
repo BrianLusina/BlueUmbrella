@@ -32,7 +32,7 @@
   "dependencies": {
     "react": "^15.4.1",
     "react-dom": "^15.4.1",
-    "snyk": "^1.369.2"
+    "snyk": "^1.381.2"
   },
   "scripts": {
     "start": "react-scripts start",
